@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mlxengingin.github.io/skillforge/sitemap.xml

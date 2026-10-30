@@ -1,29 +1,21 @@
 # SkillForge
 
-**Generate `SKILL.md` in the browser. Sell a China-indie Pro skill pack.**
+**Free SKILL.md generator + 13 spec-compliant Pro Agent Skills for Cursor, Claude Code and Codex.**
 
-## Demo
-GitHub Pages (after enable): https://mlxengingin.github.io/skillforge/
+Live: https://mlxengingin.github.io/skillforge/ (zh / en)
 
-Local: open `web/index.html` or serve `web/`.
+## Repo layout
+- `index.html`, `config.js` — the static site (GitHub Pages, root of `main`). Checkout link lives only in `config.js`.
+- `skills/free/` — 3 free skills (MIT)
+- Pro skills (13) live in the private repo `mlxengingin/skillforge-pro` (paid content; single source + build tools there)
+- `tools/validate_skill.py` — Agent Skills spec validator (`python3 tools/validate_skill.py skills`)
+- `tools/make_covers.py` — generates `assets/og.png` and store covers
+- `docs/listing/` — paste-ready listings for 爱发电, Gumroad, Agensi
+- `docs/launch/` — launch post drafts (not published)
+- `docs/USER_ONE_ACTION.md` — the one step left to start selling
 
-## What's included
-- `web/` — landing page + live SKILL.md generator (no backend, no upload)
-- `skills/free/` — 3 free skills
-- `skills/pro/` — 10 monetization skills (commercial license for buyers)
-- `docs/USER_ONE_ACTION.md` — the only owner step to start collecting money
-- `docs/AGENSI_LISTING.md` — marketplace listing draft
-- `dist/skillforge-pro-pack.zip` — packaged Pro skills for automated delivery
-
-## Pricing
-| Tier | Price | Gets |
-|---|---|---|
-| Free | $0 | Generator + 3 free skills |
-| Pro Pack | $19 one-time | 10 pro skills + listing copy + 12mo updates |
+## Spec
+Skills follow https://agentskills.io/specification: `name` = folder name (lowercase, hyphens, ≤64), `description` ≤1024 chars with "Use when …", body < 500 lines, extras in `references/`, `assets/`, `scripts/`.
 
 ## License
-- Generator + free skills: MIT
-- Pro skills: commercial license for paying customers (see `LICENSE-PRO.md`)
-
-## Owner
-GitHub: mlxengingin
+Site, free skills and tools: MIT. Pro skills: `LICENSE-PRO.md`.
